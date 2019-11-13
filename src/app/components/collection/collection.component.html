@@ -1,5 +1,8 @@
-<h1>There are two actions here</h1>
+<h1>There are four actions here</h1>
 
 <div>
-  <button>Action button for role</button>
+  <button *ngIf="collection.actionRoleMap.create.roles.includes(collectionUserContext.role)">Create Button</button>
+  <button *ngIf="collection.actionRoleMap.edit.roles.includes(collectionUserContext.role)">Edit Button</button>
+  <button *ngIf="collection.actionRoleMap.review.roles.includes(collectionUserContext.role)">Review Button</button>
+  <button *ngIf="collection.actionRoleMap.publish.roles.includes(collectionUserContext.role)">Publish Button</button>
 </div>

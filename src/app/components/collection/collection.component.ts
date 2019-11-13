@@ -8,11 +8,16 @@ import * as _ from 'lodash-es';
 export class CollectionComponent implements OnInit {
 
   @Input() collectionComponentInput: any;
+  public collectionProgramContext;
+  public collectionUserContext;
   public collection;
   constructor() { }
 
   ngOnInit() {
-    this.collection = _.get(this.collectionComponentInput, 'collectionComponent');
+    this.collectionProgramContext = _.get(this.collectionComponentInput, 'programSession');
+    this.collectionUserContext = _.get(this.collectionComponentInput, 'userSession');
+    this.collection = _.get(this.collectionProgramContext, 'collectionComponent');
+
   }
 
 }

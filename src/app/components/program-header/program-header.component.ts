@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import * as _ from 'lodash-es';
 @Component({
   selector: 'app-program-header',
@@ -8,13 +8,19 @@ import * as _ from 'lodash-es';
 export class ProgramHeaderComponent implements OnInit {
 
   @Input() headerComponentInput: any;
+  @Output() menuClick = new EventEmitter<any>();
+
   public menu;
   public userSession;
   constructor() { }
 
   ngOnInit() {
+    console.log(this.headerComponentInput);
+
     this.menu = _.get(this.headerComponentInput.programSession, 'headerComponent');
     this.userSession = this.headerComponentInput.userSession;
   }
-
+  public showComponent(component) {
+    this.menuClick.emit(component);
+  }
 }

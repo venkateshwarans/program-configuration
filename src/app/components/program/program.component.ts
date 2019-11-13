@@ -4,6 +4,7 @@ import { CollectionComponent } from '../collection/collection.component';
 import { ProgramHeaderComponent } from '../program-header/program-header.component';
 import { IssueCertificateComponent } from '../issue-certificate/issue-certificate.component';
 import { programSession } from '../../services/programSession';
+import { DashboardComponent } from '../dashboard/dashboard.component';
 @Component({
   selector: 'app-program',
   templateUrl: './program.component.html',
@@ -13,6 +14,13 @@ export class ProgramComponent implements OnInit {
   public component;
   public headerComponent;
   public inputs;
+  public outputs;
+
+  private componentMapping = {
+    dashboardComponent: DashboardComponent,
+    issueCertificateComponent: IssueCertificateComponent,
+    collectionComponent: CollectionComponent
+  };
   constructor() { }
 
   ngOnInit() {
@@ -21,12 +29,18 @@ export class ProgramComponent implements OnInit {
         programSession,
         userSession
       },
-      collectionComponentInput: programSession
+      collectionComponentInput: {
+        programSession,
+        userSession
+      }
+    };
+    this.outputs = {
+
     };
     this.headerComponent = ProgramHeaderComponent;
-    this.component = CollectionComponent;
   }
 
-
-
+  menuClickHandler(event) {
+    this.component = this.componentMapping[event];
+  }
 }

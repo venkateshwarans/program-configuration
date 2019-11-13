@@ -3,9 +3,9 @@ export let programSession = {
     'tabs': [
       {
         'name': 'tab1',
-        'label': 'Contributor',
+        'label': 'Contribute',
         'onClick': {
-          'component': 'c1Component'
+          'component': 'collectionComponent'
         },
         'actionRoleMap': {
           'show': {
@@ -19,9 +19,9 @@ export let programSession = {
       },
       {
         'name': 'tab2',
-        'label': 'Reviewer',
+        'label': 'Review',
         'onClick': {
-          'component': 'c2Component'
+          'component': 'issueCertificateComponent'
         },
         'actionRoleMap': {
           'show': {
@@ -36,7 +36,7 @@ export let programSession = {
         'name': 'tab3',
         'label': 'Dashboard',
         'onClick': {
-          'component': 'c3Component'
+          'component': 'dashboardComponent'
         },
         'actionRoleMap': {
           'show': {
@@ -49,40 +49,52 @@ export let programSession = {
       }
     ]
   },
-  'c1Component': {
-    'actionRoleMap': [
-      {
+  'collectionComponent': {
+    'actionRoleMap': {
+      'create': {
         'action': 'create',
         'roles': [
-          'Contributor'
+          'Contributor', 'Reviewer'
         ]
       },
-      {
+      'review': {
         'action': 'review',
         'roles': [
           'Reviewer'
         ]
-      }
-    ]
+      },
+      'edit': {
+        'action': 'edit',
+        'roles': [
+          'Contributor', 'Reviewer'
+        ]
+      },
+      'publish': {
+        'action': 'publish',
+        'roles': [
+          'Reviewer'
+        ]
+      },
+  }
   },
-  'c2Component': {
-    'actionRoleMap': [
-      {
-        'action': 'sendForreviwe',
+  'issueCertificateComponent': {
+    'actionRoleMap': {
+      'sendForReview': {
+        'action': 'sendForReview',
         'roles': [
           'Reviewer'
         ]
       }
-    ]
+    }
   },
-  'c3Component': {
-    'actionRoleMap': [
-      {
+  'dashboardComponent': {
+    'actionRoleMap': {
+      'showDashboards': {
         'action': 'showDashboards',
         'roles': [
           'Admin'
         ]
       }
-    ]
+    }
   }
 };

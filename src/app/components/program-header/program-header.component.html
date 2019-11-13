@@ -1,6 +1,13 @@
-
+<h2>Current Role: {{userSession.role}}</h2>
 <ul>
   <ng-container data-one="tab.actionRoleMap.show.roles[0]"  data-two="userSession.role"  *ngFor="let tab of menu.tabs; let i = index">
-    <li  *ngIf="tab.actionRoleMap.show.roles[0] == userSession.role">{{tab.label}}</li>
+    <li  *ngIf="tab.actionRoleMap.show.roles.includes(userSession.role)">
+      <h3>
+        <span (click)="showComponent(tab.onClick.component)">
+           {{tab.label}}
+       </span>
+      </h3>
+      </li>
   </ng-container>
 </ul>
+

@@ -7,6 +7,7 @@ import { CollectionComponent } from './components/collection/collection.componen
 import { ProgramComponent } from './components/program/program.component';
 import { ProgramHeaderComponent } from './components/program-header/program-header.component';
 import { IssueCertificateComponent } from './components/issue-certificate/issue-certificate.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -15,11 +16,12 @@ import { IssueCertificateComponent } from './components/issue-certificate/issue-
     CollectionComponent,
     ProgramComponent,
     ProgramHeaderComponent,
-    IssueCertificateComponent
+    IssueCertificateComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
-    DynamicModule.withComponents([CollectionComponent, IssueCertificateComponent, ProgramHeaderComponent])
+    DynamicModule.withComponents([CollectionComponent, IssueCertificateComponent, ProgramHeaderComponent, DashboardComponent])
   ],
   providers: [],
   bootstrap: [AppComponent]
