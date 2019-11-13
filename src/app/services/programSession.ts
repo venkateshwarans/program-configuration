@@ -3,49 +3,49 @@ export let programSession = {
     'tabs': [
       {
         'name': 'tab1',
-        'lable': 'Contributor',
+        'label': 'Contributor',
         'onClick': {
           'component': 'c1Component'
         },
-        'actionRoleMap': [
-          {
+        'actionRoleMap': {
+          'show': {
             'action': 'show',
             'roles': [
               'Contributor',
               'Reviewer'
             ]
           }
-        ]
+        }
       },
       {
         'name': 'tab2',
-        'lable': 'Reviewer',
+        'label': 'Reviewer',
         'onClick': {
           'component': 'c2Component'
         },
-        'actionRoleMap': [
-          {
+        'actionRoleMap': {
+          'show': {
             'action': 'show',
             'roles': [
               'Reviewer'
             ]
           }
-        ]
+        }
       },
       {
         'name': 'tab3',
-        'lable': 'Dashboard',
+        'label': 'Dashboard',
         'onClick': {
           'component': 'c3Component'
         },
-        'actionRoleMap': [
-          {
+        'actionRoleMap': {
+          'show': {
             'action': 'show',
             'roles': [
               'Admin'
             ]
           }
-        ]
+        }
       }
     ]
   },

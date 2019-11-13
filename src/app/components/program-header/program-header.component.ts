@@ -9,10 +9,12 @@ export class ProgramHeaderComponent implements OnInit {
 
   @Input() headerComponentInput: any;
   public menu;
+  public userSession;
   constructor() { }
 
   ngOnInit() {
-    this.menu = _.get(this.headerComponentInput, 'headerComponent');
+    this.menu = _.get(this.headerComponentInput.programSession, 'headerComponent');
+    this.userSession = this.headerComponentInput.userSession;
   }
 
 }

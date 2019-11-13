@@ -1,4 +1,6 @@
 
 <ul>
-  <li *ngFor="let tab of menu.tabs; let i = index">{{tab.name}}</li>
+  <ng-container data-one="tab.actionRoleMap.show.roles[0]"  data-two="userSession.role"  *ngFor="let tab of menu.tabs; let i = index">
+    <li  *ngIf="tab.actionRoleMap.show.roles[0] == userSession.role">{{tab.label}}</li>
+  </ng-container>
 </ul>

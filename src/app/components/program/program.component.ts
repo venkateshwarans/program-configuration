@@ -17,7 +17,11 @@ export class ProgramComponent implements OnInit {
 
   ngOnInit() {
     this.inputs = {
-      headerComponentInput: programSession
+      headerComponentInput: {
+        programSession,
+        userSession
+      },
+      collectionComponentInput: programSession
     };
     this.headerComponent = ProgramHeaderComponent;
     this.component = CollectionComponent;
