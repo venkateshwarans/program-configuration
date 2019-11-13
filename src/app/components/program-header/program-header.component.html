@@ -1,7 +1,7 @@
-<h2>Current Role: {{userSession.role}}</h2>
-<ul>
-  <ng-container data-one="tab.actionRoleMap.show.roles[0]"  data-two="userSession.role"  *ngFor="let tab of menu.tabs; let i = index">
-    <li  *ngIf="tab.actionRoleMap.show.roles.includes(userSession.role)">
+
+<!-- <ul>
+  <ng-container *ngFor="let tab of menu.tabs; let i = index">
+    <li *ngIf="tab.actionRoleMap.show.roles.includes(userSession.role)">
       <h3>
         <span (click)="showComponent(tab.onClick.component)">
            {{tab.label}}
@@ -9,5 +9,14 @@
       </h3>
       </li>
   </ng-container>
-</ul>
+</ul> -->
 
+
+<div class="ui menu">
+  <ng-container *ngFor="let tab of menu.tabs; let i = index">
+    <a *ngIf="tab.actionRoleMap.show.roles.includes(userSession.role)" (click)="showComponent(tab.onClick.component)" class="item">{{tab.label}}</a>
+  </ng-container>
+  <div class="item right ">
+    <h3>Current Role: {{userSession.role}}</h3>
+  </div>
+  </div>

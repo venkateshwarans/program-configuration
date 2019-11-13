@@ -1,4 +1,12 @@
 export let programSession = {
+  'defaultActiveTab': [{
+    'roles': ['Contributor', 'Reviewer'],
+    'activeTab': 'tab1'
+  },
+  {
+    'roles': ['Admin'],
+    'activeTab': 'tab3'
+  }],
   'headerComponent': {
     'tabs': [
       {

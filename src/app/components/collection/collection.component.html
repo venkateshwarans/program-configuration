@@ -1,8 +1,7 @@
-<h1>There are four actions here</h1>
 
-<div>
-  <button *ngIf="collection.actionRoleMap.create.roles.includes(collectionUserContext.role)">Create Button</button>
-  <button *ngIf="collection.actionRoleMap.edit.roles.includes(collectionUserContext.role)">Edit Button</button>
-  <button *ngIf="collection.actionRoleMap.review.roles.includes(collectionUserContext.role)">Review Button</button>
-  <button *ngIf="collection.actionRoleMap.publish.roles.includes(collectionUserContext.role)">Publish Button</button>
+<div class="ui very padded text segment">
+  <button class="ui button" *ngIf="collection.actionRoleMap.create.roles.includes(collectionUserContext.role)">Create Question</button>
+  <button class="ui button" *ngIf="collection.actionRoleMap.edit.roles.includes(collectionUserContext.role)">Edit Question</button>
+  <button class="ui button" *ngIf="collection.actionRoleMap.review.roles.includes(collectionUserContext.role)">Review Question</button>
+  <button class="ui button" *ngIf="collection.actionRoleMap.publish.roles.includes(collectionUserContext.role)">Publish Question</button>
 </div>
