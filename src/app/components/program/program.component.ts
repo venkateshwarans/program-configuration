@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { userSession } from '../../services/userSession';
+import * as _ from 'lodash-es';
 import { CollectionComponent } from '../collection/collection.component';
 import { ProgramHeaderComponent } from '../program-header/program-header.component';
 import { IssueCertificateComponent } from '../issue-certificate/issue-certificate.component';
@@ -15,6 +16,8 @@ export class ProgramComponent implements OnInit {
   public headerComponent;
   public inputs;
   public outputs;
+  public isDefaultTabSet;
+  public defaultView;
 
   private componentMapping = {
     dashboardComponent: DashboardComponent,
@@ -24,6 +27,15 @@ export class ProgramComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.isDefaultTabSet = _.get(programSession, 'defaultActiveTab');
+    if (this.isDefaultTabSet) {
+      // this.component = this.defaultView.
+     const tab = _.find(this.isDefaultTabSet, (obj) => {
+       return obj.roles.includes(userSession.role);
+      });
+      this.defaultView = _.find(programSession['headerComponent'].tabs, {'index': tab.activeTab}).onClick.component;
+      this.component = this.componentMapping[this.defaultView];
+    }
     this.inputs = {
       headerComponentInput: {
         programSession,
@@ -32,7 +44,8 @@ export class ProgramComponent implements OnInit {
       collectionComponentInput: {
         programSession,
         userSession
-      }
+      },
+
     };
     this.outputs = {
 

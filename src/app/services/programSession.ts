@@ -1,16 +1,23 @@
 export let programSession = {
-  'defaultActiveTab': [{
-    'roles': ['Contributor', 'Reviewer'],
-    'activeTab': 'tab1'
-  },
-  {
-    'roles': ['Admin'],
-    'activeTab': 'tab3'
-  }],
+  'defaultActiveTab': [
+    {
+      'roles': ['Contributor'],
+      'activeTab': 0,
+    },
+    {
+      'roles': ['Reviewer'],
+      'activeTab': 1
+    },
+    {
+      'roles': ['Admin'],
+      'activeTab': 2
+    }
+  ],
   'headerComponent': {
     'tabs': [
       {
         'name': 'tab1',
+        'index': 0,
         'label': 'Contribute',
         'onClick': {
           'component': 'collectionComponent'
@@ -27,6 +34,7 @@ export let programSession = {
       },
       {
         'name': 'tab2',
+        'index': 1,
         'label': 'Review',
         'onClick': {
           'component': 'issueCertificateComponent'
@@ -42,6 +50,7 @@ export let programSession = {
       },
       {
         'name': 'tab3',
+        'index': 2,
         'label': 'Dashboard',
         'onClick': {
           'component': 'dashboardComponent'
