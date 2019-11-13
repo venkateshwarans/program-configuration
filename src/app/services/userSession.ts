@@ -1,4 +1,6 @@
 export let userSession = {
   'name': 'contentcreator',
-  'role': 'Reviewer'
+  // 'role': 'Reviewer'
+  // 'role': 'Admin'
+  'role': 'Contributor'
 };

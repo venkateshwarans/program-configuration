@@ -1,19 +1,5 @@
-
-<!-- <ul>
-  <ng-container *ngFor="let tab of menu.tabs; let i = index">
-    <li *ngIf="tab.actionRoleMap.show.roles.includes(userSession.role)">
-      <h3>
-        <span (click)="showComponent(tab.onClick.component)">
-           {{tab.label}}
-       </span>
-      </h3>
-      </li>
-  </ng-container>
-</ul> -->
-
-
 <div class="ui menu">
-  <ng-container *ngFor="let tab of menu.tabs; let i = index">
+  <ng-container *ngFor="let tab of filterBy('index'); let i = index">
     <a *ngIf="tab.actionRoleMap.show.roles.includes(userSession.role)" (click)="showComponent(tab.onClick.component)" class="item">{{tab.label}}</a>
   </ng-container>
   <div class="item right ">

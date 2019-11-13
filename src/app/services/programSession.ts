@@ -1,8 +1,8 @@
 const programOneSession = {
   'defaultActiveTab': [
     {
-      'roles': ['Contributor', 'Reviewer'],
-      'activeTab': 0,
+      'roles': ['Contributor', 'Reviewer', 'Admin'],
+      'activeTab': 1,
     },
     {
       'roles': ['Admin'],
@@ -12,15 +12,19 @@ const programOneSession = {
   'headerComponent': {
     'tabs': [
       {
-        'name': 'tab1',
         'index': 0,
-        'label': 'Contribute',
+        'label': 'Contribute Questions',
         'onClick': {
           'component': 'collectionComponent'
         },
         'actionRoleMap': {
           'show': {
-            'action': 'show',
+            'roles': [
+              'Contributor',
+              'Reviewer'
+            ]
+          },
+          'drag': {
             'roles': [
               'Contributor',
               'Reviewer'
@@ -29,15 +33,13 @@ const programOneSession = {
         }
       },
       {
-        'name': 'tab2',
         'index': 1,
-        'label': 'Review',
+        'label': 'Issue Certificate',
         'onClick': {
           'component': 'issueCertificateComponent'
         },
         'actionRoleMap': {
           'show': {
-            'action': 'show',
             'roles': [
               'Reviewer'
             ]
@@ -45,7 +47,6 @@ const programOneSession = {
         }
       },
       {
-        'name': 'tab3',
         'index': 2,
         'label': 'Dashboard',
         'onClick': {
@@ -65,30 +66,26 @@ const programOneSession = {
   'collectionComponent': {
     'actionRoleMap': {
       'create': {
-        'action': 'create',
         'roles': [
           'Contributor', 'Reviewer'
         ]
       },
       'review': {
-        'action': 'review',
         'roles': [
           'Reviewer'
         ]
       },
       'edit': {
-        'action': 'edit',
         'roles': [
           'Contributor', 'Reviewer'
         ]
       },
       'publish': {
-        'action': 'publish',
         'roles': [
           'Reviewer'
         ]
       },
-  }
+    }
   },
   'issueCertificateComponent': {
     'actionRoleMap': {
@@ -130,7 +127,6 @@ const programTwoSession = {
   'headerComponent': {
     'tabs': [
       {
-        'name': 'tab1',
         'index': 0,
         'label': 'Contribute',
         'onClick': {
@@ -147,7 +143,6 @@ const programTwoSession = {
         }
       },
       {
-        'name': 'tab2',
         'index': 1,
         'label': 'Review',
         'onClick': {
@@ -191,7 +186,7 @@ const programTwoSession = {
           'Reviewer'
         ]
       },
-  }
+    }
   },
   'playerComponent': {
     'actionRoleMap': {
@@ -206,4 +201,4 @@ const programTwoSession = {
 };
 
 
-export let programSession = programOneSession ;
+export let programSession = programOneSession;
