@@ -1,12 +1,8 @@
-export let programSession = {
+const programOneSession = {
   'defaultActiveTab': [
     {
-      'roles': ['Contributor'],
+      'roles': ['Contributor', 'Reviewer'],
       'activeTab': 0,
-    },
-    {
-      'roles': ['Reviewer'],
-      'activeTab': 1
     },
     {
       'roles': ['Admin'],
@@ -115,3 +111,99 @@ export let programSession = {
     }
   }
 };
+
+const programTwoSession = {
+  'defaultActiveTab': [
+    {
+      'roles': ['Contributor'],
+      'activeTab': 0,
+    },
+    {
+      'roles': ['Reviewer'],
+      'activeTab': 1
+    },
+    {
+      'roles': ['Admin'],
+      'activeTab': 1
+    }
+  ],
+  'headerComponent': {
+    'tabs': [
+      {
+        'name': 'tab1',
+        'index': 0,
+        'label': 'Contribute',
+        'onClick': {
+          'component': 'uploadComponent'
+        },
+        'actionRoleMap': {
+          'show': {
+            'action': 'show',
+            'roles': [
+              'Contributor',
+              'Reviewer'
+            ]
+          }
+        }
+      },
+      {
+        'name': 'tab2',
+        'index': 1,
+        'label': 'Review',
+        'onClick': {
+          'component': 'playerComponent'
+        },
+        'actionRoleMap': {
+          'show': {
+            'action': 'show',
+            'roles': [
+              'Reviewer',
+              'Admin'
+            ]
+          }
+        }
+      }
+    ]
+  },
+  'uploadComponent': {
+    'actionRoleMap': {
+      'create': {
+        'action': 'create',
+        'roles': [
+          'Contributor', 'Reviewer'
+        ]
+      },
+      'review': {
+        'action': 'review',
+        'roles': [
+          'Reviewer'
+        ]
+      },
+      'edit': {
+        'action': 'edit',
+        'roles': [
+          'Contributor', 'Reviewer'
+        ]
+      },
+      'publish': {
+        'action': 'publish',
+        'roles': [
+          'Reviewer'
+        ]
+      },
+  }
+  },
+  'playerComponent': {
+    'actionRoleMap': {
+      'sendForReview': {
+        'action': 'sendForReview',
+        'roles': [
+          'Reviewer'
+        ]
+      }
+    }
+  }
+};
+
+
+export let programSession = programOneSession ;

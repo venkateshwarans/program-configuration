@@ -8,6 +8,9 @@ import { ProgramComponent } from './components/program/program.component';
 import { ProgramHeaderComponent } from './components/program-header/program-header.component';
 import { IssueCertificateComponent } from './components/issue-certificate/issue-certificate.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { QuestionCreationComponent } from './components/question-creation/question-creation.component';
+import { UploadContentComponent } from './components/upload-content/upload-content.component';
+import { PlayerComponent } from './components/player/player.component';
 
 
 @NgModule({
@@ -17,11 +20,15 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     ProgramComponent,
     ProgramHeaderComponent,
     IssueCertificateComponent,
-    DashboardComponent
+    DashboardComponent,
+    QuestionCreationComponent,
+    UploadContentComponent,
+    PlayerComponent
   ],
   imports: [
     BrowserModule,
-    DynamicModule.withComponents([CollectionComponent, IssueCertificateComponent, ProgramHeaderComponent, DashboardComponent])
+    DynamicModule.withComponents([CollectionComponent, IssueCertificateComponent, PlayerComponent,
+      ProgramHeaderComponent, DashboardComponent, QuestionCreationComponent, UploadContentComponent ])
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,8 +4,11 @@ import * as _ from 'lodash-es';
 import { CollectionComponent } from '../collection/collection.component';
 import { ProgramHeaderComponent } from '../program-header/program-header.component';
 import { IssueCertificateComponent } from '../issue-certificate/issue-certificate.component';
-import { programSession } from '../../services/programSession';
+import {programSession} from '../../services/programSession';
 import { DashboardComponent } from '../dashboard/dashboard.component';
+import { UploadContentComponent } from '../upload-content/upload-content.component';
+import { QuestionCreationComponent } from '../question-creation/question-creation.component';
+import { PlayerComponent } from '../player/player.component';
 @Component({
   selector: 'app-program',
   templateUrl: './program.component.html',
@@ -22,7 +25,10 @@ export class ProgramComponent implements OnInit {
   private componentMapping = {
     dashboardComponent: DashboardComponent,
     issueCertificateComponent: IssueCertificateComponent,
-    collectionComponent: CollectionComponent
+    collectionComponent: CollectionComponent,
+    uploadComponent: UploadContentComponent,
+    questionCreationComponent: QuestionCreationComponent,
+    playerComponent: PlayerComponent
   };
   constructor() { }
 
