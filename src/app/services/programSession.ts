@@ -1,8 +1,8 @@
 const programOneSession = {
   'defaultActiveTab': [
     {
-      'roles': ['Contributor', 'Reviewer', 'Admin'],
-      'activeTab': 1,
+      'roles': ['Contributor', 'Reviewer'],
+      'activeTab': 0,
     },
     {
       'roles': ['Admin'],
