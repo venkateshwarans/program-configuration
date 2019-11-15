@@ -314,36 +314,36 @@
       ]
     },
     "filesConfig": {
-          "accepted": "pdf, mp4, webm, youtube",
-          "size": "50"
+      "accepted": "pdf, mp4, webm, youtube",
+      "size": "50"
     },
     "practiceSetConfig": {
       "No of options": 4,
-        "solutionType": [
-          "Video",
-          "Text & image"
-        ],
-        "questionCategory": [
-          "vsa",
-          "sa",
-          "ls",
-          "mcq",
-          "curiosity"
-        ],
-        "formConfiguration": [
-          {
-            "code": "LearningOutcome",
-            "range": [],
-            "label": "Learning Outcome",
-            "multiselect": false
-          },
-          {
-            "code": "bloomslevel",
-            "range": [],
-            "label": "Learning Level",
-            "multiselect": true
-          }
-        ]
+      "solutionType": [
+        "Video",
+        "Text & image"
+      ],
+      "questionCategory": [
+        "vsa",
+        "sa",
+        "ls",
+        "mcq",
+        "curiosity"
+      ],
+      "formConfiguration": [
+        {
+          "code": "LearningOutcome",
+          "range": [],
+          "label": "Learning Outcome",
+          "multiselect": false
+        },
+        {
+          "code": "bloomslevel",
+          "range": [],
+          "label": "Learning Level",
+          "multiselect": true
+        }
+      ]
     },
     "actions": {
       "showFilters": {
@@ -506,224 +506,6 @@
       },
       "reportRefresh": {
         "label": "Refresh"
-      }
-    },
-    "components": {
-      "collectionComponent": {
-        "textbookList": [],
-        "actionRoleMap": {
-          "showFilters": {
-            "roles": [
-              "Contributor",
-              "Reviewer",
-              "Admin"
-            ]
-          }
-        }
-      },
-      "chapterlistComponent": {
-        "actionRoleMap": {
-          "addresource": {
-            "roles": [
-              "Contributor"
-            ]
-          },
-          "preview": {
-            "roles": [
-              "Contributor",
-              "Reviewer"
-            ]
-          },
-          "move": {
-            "roles": [
-              "Contributor"
-            ]
-          },
-          "delete": {
-            "roles": [
-              "Contributor"
-            ]
-          },
-          "selectChapter": {
-            "roles": [
-              "Contributor",
-              "Reviewer"
-            ]
-          },
-          "showTotalContribution": {
-            "lable": "Total Contributoion",
-            "roles": [
-              "Contributor",
-              "Reviewer"
-            ]
-          },
-          "showMyContribution": {
-            "lable": "My Contribution",
-            "roles": [
-              "Contributor"
-            ]
-          },
-          "showRejected": {
-            "lable": "Rejected",
-            "roles": [
-              "Contributor"
-            ]
-          },
-          "showUnderReview": {
-            "lable": "Under Review",
-            "roles": [
-              "Contributor"
-            ]
-          },
-          "showtotalUnderReview": {
-            "lable": "Total under review",
-            "roles": [
-              "Reviewer"
-            ]
-          },
-          "showAcceptedByMe": {
-            "lable": "Rejected by me",
-            "roles": [
-              "Reviewer"
-            ]
-          },
-          "showRejectedByMe": {
-            "lable": "Accepted by me",
-            "roles": [
-              "Reviewer"
-            ]
-          }
-        }
-      },
-      "practiceQuestionSetComponent": {
-        "No of options": 4,
-        "solutionType": [
-          "Video",
-          "Text & image"
-        ],
-        "questionCategory": [
-          "vsa",
-          "sa",
-          "ls",
-          "mcq",
-          "curiosity"
-        ],
-        "formConfiguration": [
-          {
-            "code": "LearningOutcome",
-            "range": [],
-            "label": "Learning Outcome",
-            "multiselect": false
-          },
-          {
-            "code": "bloomslevel",
-            "range": [],
-            "label": "Learning Level",
-            "multiselect": true
-          }
-        ],
-        "actionRoleMap": {
-          "savePracticeSet": {
-            "roles": [
-              "Contributor"
-            ]
-          },
-          "previewPracticeSet": {
-            "roles": [
-              "Contributor",
-              "Reviewer"
-            ]
-          },
-          "submitPracticeSet": {
-            "roles": [
-              "Contributor"
-            ]
-          },
-          "deletePracticeSet": {
-            "roles": [
-              "Contributor"
-            ]
-          },
-          "acceptPracticeSet": {
-            "roles": [
-              "Reviewer"
-            ]
-          },
-          "rejectPracticeSet": {
-            "roles": [
-              "Reviewer"
-            ]
-          },
-          "addQuestionPracticeSet": {
-            "roles": [
-              "Contributor"
-            ]
-          },
-          "addSolutionPracticeSet": {
-            "roles": [
-              "Contributor"
-            ]
-          }
-        }
-      },
-      "uploadComponent": {
-        "filesConfig": {
-          "accepted": "pdf, mp4, webm, youtube",
-          "size": "50"
-        },
-        "actionRoleMap": {
-          "changeUploadFile": {
-            "roles": [
-              "Contributor"
-            ]
-          },
-          "submitUpload": {
-            "roles": [
-              "Contributor"
-            ]
-          },
-          "acceptUpload": {
-            "roles": [
-              "Reviewer"
-            ]
-          },
-          "rejectUpload": {
-            "roles": [
-              "Reviewer"
-            ]
-          }
-        }
-      },
-      "previewComponent": {
-        "actionRoleMap": {
-          "showPreview": {
-            "roles": [
-              "Contributor",
-              "Reviewer"
-            ]
-          }
-        }
-      },
-      "dashboardComponent": {
-        "actionRoleMap": {
-          "showDashboard": {
-            "roles": [
-              "Admin"
-            ]
-          },
-          "reportSelection": {
-            "label": "Select Report"
-          },
-          "reportContentTypeSelection": {
-            "label": "Select Content-Type"
-          },
-          "reportDownload": {
-            "label": "Download"
-          },
-          "reportRefresh": {
-            "label": "Refresh"
-          }
-        }
       }
     }
   }
