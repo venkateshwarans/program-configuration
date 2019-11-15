@@ -17,7 +17,7 @@
   "defaultRoles": [
     "CONTRIBUTOR"
   ],
-  "onBoardForm": {
+  "onBoardingForm": {
     "templateName": "onBoardingForm",
     "action": "onboard",
     "fields": [
@@ -45,6 +45,222 @@
         "index": 1
       }
     ]
+  },
+  "header": {
+    "tabs": [
+      {
+        "index": 0,
+        "label": "Contribute Questions",
+        "onClick": {
+          "component": "collectionComponent"
+        },
+        "actionRoleMap": {
+          "show": {
+            "roles": [
+              "Contributor",
+              "Reviewer"
+            ]
+          },
+          "drag": {
+            "roles": [
+              "Contributor",
+              "Reviewer"
+            ]
+          }
+        }
+      },
+      {
+        "index": 1,
+        "label": "Issue Certificate",
+        "onClick": {
+          "component": "issueCertificateComponent"
+        },
+        "actionRoleMap": {
+          "show": {
+            "roles": [
+              "Reviewer"
+            ]
+          }
+        }
+      },
+      {
+        "index": 2,
+        "label": "Dashboard",
+        "onClick": {
+          "component": "dashboardComponent"
+        },
+        "actionRoleMap": {
+          "show": {
+            "roles": [
+              "Admin"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "actions": {
+    "showFilters": {
+      "roles": [
+        "Contributor",
+        "Reviewer",
+        "Admin"
+      ]
+    },
+    "addresource": {
+      "roles": [
+        "Contributor"
+      ]
+    },
+    "preview": {
+      "roles": [
+        "Contributor",
+        "Reviewer"
+      ]
+    },
+    "move": {
+      "roles": [
+        "Contributor"
+      ]
+    },
+    "delete": {
+      "roles": [
+        "Contributor"
+      ]
+    },
+    "selectChapter": {
+      "roles": [
+        "Contributor",
+        "Reviewer"
+      ]
+    },
+    "showTotalContribution": {
+      "lable": "Total Contributoion",
+      "roles": [
+        "Contributor",
+        "Reviewer"
+      ]
+    },
+    "showMyContribution": {
+      "lable": "My Contribution",
+      "roles": [
+        "Contributor"
+      ]
+    },
+    "showRejected": {
+      "lable": "Rejected",
+      "roles": [
+        "Contributor"
+      ]
+    },
+    "showUnderReview": {
+      "lable": "Under Review",
+      "roles": [
+        "Contributor"
+      ]
+    },
+    "showtotalUnderReview": {
+      "lable": "Total under review",
+      "roles": [
+        "Reviewer"
+      ]
+    },
+    "showAcceptedByMe": {
+      "lable": "Rejected by me",
+      "roles": [
+        "Reviewer"
+      ]
+    },
+    "showRejectedByMe": {
+      "lable": "Accepted by me",
+      "roles": [
+        "Reviewer"
+      ]
+    },
+    "savePracticeSet": {
+      "roles": [
+        "Contributor"
+      ]
+    },
+    "previewPracticeSet": {
+      "roles": [
+        "Contributor",
+        "Reviewer"
+      ]
+    },
+    "submitPracticeSet": {
+      "roles": [
+        "Contributor"
+      ]
+    },
+    "deletePracticeSet": {
+      "roles": [
+        "Contributor"
+      ]
+    },
+    "acceptPracticeSet": {
+      "roles": [
+        "Reviewer"
+      ]
+    },
+    "rejectPracticeSet": {
+      "roles": [
+        "Reviewer"
+      ]
+    },
+    "addQuestionPracticeSet": {
+      "roles": [
+        "Contributor"
+      ]
+    },
+    "addSolutionPracticeSet": {
+      "roles": [
+        "Contributor"
+      ]
+    },
+    "changeUploadFile": {
+      "roles": [
+        "Contributor"
+      ]
+    },
+    "submitUpload": {
+      "roles": [
+        "Contributor"
+      ]
+    },
+    "acceptUpload": {
+      "roles": [
+        "Reviewer"
+      ]
+    },
+    "rejectUpload": {
+      "roles": [
+        "Reviewer"
+      ]
+    },
+    "showPreview": {
+      "roles": [
+        "Contributor",
+        "Reviewer"
+      ]
+    },
+    "showDashboard": {
+      "roles": [
+        "Admin"
+      ]
+    },
+    "reportSelection": {
+      "label": "Select Report"
+    },
+    "reportContentTypeSelection": {
+      "label": "Select Content-Type"
+    },
+    "reportDownload": {
+      "label": "Download"
+    },
+    "reportRefresh": {
+      "label": "Refresh"
+    }
   },
   "config": {
     "filters": {
@@ -97,6 +313,10 @@
           "visibility": true
         }
       ]
+    },
+    "groupBy": {
+      "value": "Subject",
+      "defaultValue": "Class"
     },
     "contentTypes": {
       "value": [
@@ -260,59 +480,6 @@
       ]
     },
     "textbookList": [],
-    "header": {
-      "tabs": [
-        {
-          "index": 0,
-          "label": "Contribute Questions",
-          "onClick": {
-            "component": "collectionComponent"
-          },
-          "actionRoleMap": {
-            "show": {
-              "roles": [
-                "Contributor",
-                "Reviewer"
-              ]
-            },
-            "drag": {
-              "roles": [
-                "Contributor",
-                "Reviewer"
-              ]
-            }
-          }
-        },
-        {
-          "index": 1,
-          "label": "Issue Certificate",
-          "onClick": {
-            "component": "issueCertificateComponent"
-          },
-          "actionRoleMap": {
-            "show": {
-              "roles": [
-                "Reviewer"
-              ]
-            }
-          }
-        },
-        {
-          "index": 2,
-          "label": "Dashboard",
-          "onClick": {
-            "component": "dashboardComponent"
-          },
-          "actionRoleMap": {
-            "show": {
-              "roles": [
-                "Admin"
-              ]
-            }
-          }
-        }
-      ]
-    },
     "filesConfig": {
       "accepted": "pdf, mp4, webm, youtube",
       "size": "50"
@@ -329,184 +496,21 @@
         "ls",
         "mcq",
         "curiosity"
-      ],
-      "formConfiguration": [
-        {
-          "code": "LearningOutcome",
-          "range": [],
-          "label": "Learning Outcome",
-          "multiselect": false
-        },
-        {
-          "code": "bloomslevel",
-          "range": [],
-          "label": "Learning Level",
-          "multiselect": true
-        }
       ]
     },
-    "actions": {
-      "showFilters": {
-        "roles": [
-          "Contributor",
-          "Reviewer",
-          "Admin"
-        ]
+    "formConfiguration": [
+      {
+        "code": "LearningOutcome",
+        "range": [],
+        "label": "Learning Outcome",
+        "multiselect": false
       },
-      "addresource": {
-        "roles": [
-          "Contributor"
-        ]
-      },
-      "preview": {
-        "roles": [
-          "Contributor",
-          "Reviewer"
-        ]
-      },
-      "move": {
-        "roles": [
-          "Contributor"
-        ]
-      },
-      "delete": {
-        "roles": [
-          "Contributor"
-        ]
-      },
-      "selectChapter": {
-        "roles": [
-          "Contributor",
-          "Reviewer"
-        ]
-      },
-      "showTotalContribution": {
-        "lable": "Total Contributoion",
-        "roles": [
-          "Contributor",
-          "Reviewer"
-        ]
-      },
-      "showMyContribution": {
-        "lable": "My Contribution",
-        "roles": [
-          "Contributor"
-        ]
-      },
-      "showRejected": {
-        "lable": "Rejected",
-        "roles": [
-          "Contributor"
-        ]
-      },
-      "showUnderReview": {
-        "lable": "Under Review",
-        "roles": [
-          "Contributor"
-        ]
-      },
-      "showtotalUnderReview": {
-        "lable": "Total under review",
-        "roles": [
-          "Reviewer"
-        ]
-      },
-      "showAcceptedByMe": {
-        "lable": "Rejected by me",
-        "roles": [
-          "Reviewer"
-        ]
-      },
-      "showRejectedByMe": {
-        "lable": "Accepted by me",
-        "roles": [
-          "Reviewer"
-        ]
-      },
-      "savePracticeSet": {
-        "roles": [
-          "Contributor"
-        ]
-      },
-      "previewPracticeSet": {
-        "roles": [
-          "Contributor",
-          "Reviewer"
-        ]
-      },
-      "submitPracticeSet": {
-        "roles": [
-          "Contributor"
-        ]
-      },
-      "deletePracticeSet": {
-        "roles": [
-          "Contributor"
-        ]
-      },
-      "acceptPracticeSet": {
-        "roles": [
-          "Reviewer"
-        ]
-      },
-      "rejectPracticeSet": {
-        "roles": [
-          "Reviewer"
-        ]
-      },
-      "addQuestionPracticeSet": {
-        "roles": [
-          "Contributor"
-        ]
-      },
-      "addSolutionPracticeSet": {
-        "roles": [
-          "Contributor"
-        ]
-      },
-      "changeUploadFile": {
-        "roles": [
-          "Contributor"
-        ]
-      },
-      "submitUpload": {
-        "roles": [
-          "Contributor"
-        ]
-      },
-      "acceptUpload": {
-        "roles": [
-          "Reviewer"
-        ]
-      },
-      "rejectUpload": {
-        "roles": [
-          "Reviewer"
-        ]
-      },
-      "showPreview": {
-        "roles": [
-          "Contributor",
-          "Reviewer"
-        ]
-      },
-      "showDashboard": {
-        "roles": [
-          "Admin"
-        ]
-      },
-      "reportSelection": {
-        "label": "Select Report"
-      },
-      "reportContentTypeSelection": {
-        "label": "Select Content-Type"
-      },
-      "reportDownload": {
-        "label": "Download"
-      },
-      "reportRefresh": {
-        "label": "Refresh"
+      {
+        "code": "bloomslevel",
+        "range": [],
+        "label": "Learning Level",
+        "multiselect": true
       }
-    }
+    ]
   }
 }
