@@ -11,6 +11,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { QuestionCreationComponent } from './components/question-creation/question-creation.component';
 import { UploadContentComponent } from './components/upload-content/upload-content.component';
 import { PlayerComponent } from './components/player/player.component';
+import { LibraryFiltersComponent } from './components/library-filters/library-filters.component';
+import { LibraryComponent } from './components/library/library.component';
+import { DesktopHeaderComponent } from './components/desktop-header/desktop-header.component';
 
 
 @NgModule({
@@ -23,7 +26,10 @@ import { PlayerComponent } from './components/player/player.component';
     DashboardComponent,
     QuestionCreationComponent,
     UploadContentComponent,
-    PlayerComponent
+    PlayerComponent,
+    LibraryFiltersComponent,
+    LibraryComponent,
+    DesktopHeaderComponent
   ],
   imports: [
     BrowserModule,

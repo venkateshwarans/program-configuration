@@ -1,0 +1,31 @@
+
+<!-- State and Medium components -->
+<div class="d-flex state-medium-container sb-bg-color-white">
+    <div class="ui container d-flex">
+      <div class="state-medium-container__dropdown">
+        <!-- state component -->
+        <div class="sb-field mb-0">
+        <sui-select class="selection state-selection" placeholder="Select State" #multiSelect>
+            <sui-select-option *ngFor="let option of boards" [value]="option">
+            </sui-select-option>
+        </sui-select>
+    </div>
+        <!-- state component ends -->
+      </div>
+      <div class="state-medium-container__separator"></div>
+      <div class="state-medium-container__medium">
+        <!-- medium component -->
+        <sb-library-filters [list]="mediums" [layout]="mediumLayout" [selectedItems]="[0]" (selectedFilter)="getSelectedFilters($event, 'mediums')"></sb-library-filters>
+        <!-- medium component ends -->
+      </div>
+    </div>
+  </div>
+  <!-- State and Medium components ends-->
+  
+  <!-- class component -->
+  <div class="sb-class-bar sb-bg-color-gray-0">
+    <div class="ui container">
+        <sb-library-filters [list]="classes" [layout]="classLayout" [selectedItems]="[0]" (selectedFilter)="getSelectedFilters($event, 'classes')"></sb-library-filters>
+    </div>
+  </div>
+  <!-- class component ends -->
