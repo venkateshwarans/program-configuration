@@ -21,7 +21,7 @@
     "@angular/platform-browser-dynamic": "^6.0.0",
     "@angular/router": "^6.0.0",
     "core-js": "^2.5.4",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "lodash-es": "^4.17.15",
     "ng-dynamic-component": "^5.0.0",
     "ng-semantic": "^1.1.13",
